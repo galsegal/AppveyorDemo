@@ -9,8 +9,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Appveyor Demo</description>
         <summary>Appveyor demo</summary>
-        <releaseNotes>1. bla
-2. bla</releaseNotes>
+        <releaseNotes></releaseNotes>
         <tags>testing appveyor</tags>
         <dependencies>
             <dependency id="NUnit" version="3.6.0" />

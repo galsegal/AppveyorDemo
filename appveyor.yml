@@ -1,2 +1,11 @@
 before_build:
   - nuget restore
+nuget:
+  account_feed: true
+  project_feed: true
+deploy:
+  - provider: NuGet
+    symbol_server: https://ci.appveyor.com/nuget/appveyordemo-yn8bo6e9om1t
+    api_key:
+      secure: <secure encrypted key here>
+    artifact: /.*\.symbols\.nupkg/
