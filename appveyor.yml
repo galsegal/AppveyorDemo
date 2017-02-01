@@ -2,6 +2,10 @@ os: Windows Server 2012
 version: 0.0.1.{build}
 configuration: Release
 
+branches:
+  only:
+    - master
+
 assembly_info: 
   patch: true 
   file: AssemblyInfo.* 
@@ -12,12 +16,12 @@ assembly_info:
 before_build:
   - nuget restore
 
+cache:
+  - packages -> **\packages.config
+
 build:
     project: AppveyorDemo.sln
     verbosity: minimal
-    publish_nuget: true
-    publish_nuget_symbols: true
-    include_nuget_references: true
 
 nuget:
   account_feed: true
