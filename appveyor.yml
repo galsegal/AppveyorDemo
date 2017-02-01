@@ -5,7 +5,7 @@
     only:
       - master
 
-  version: 1.0.{build}
+  version: 1.0.0.{build}
   configuration: Release
   os: Windows Server 2012
   platform: Any CPU
@@ -26,12 +26,9 @@
   build:
     project: AppveyorDemo.sln
     verbosity: minimal
-    publish_nuget: true
-    publish_nuget_symbols: true
-    include_nuget_references: true
 
   after_build:
-  - nuget pack AppveyorDemo\AppveyorDemo.nuspec -Version %appveyor_build_version%
+  - nuget pack AppveyorDemo\AppveyorDemo.nuspec -Version %appveyor_build_version% -symbols
   - appveyor PushArtifact AppveyorDemo.%appveyor_build_version%.nupkg
   
   test: on
