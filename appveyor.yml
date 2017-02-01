@@ -1,5 +1,7 @@
+version: 1.0.0.{build}
+
 os: Windows Server 2012
-version: 0.0.1.{build}
+platform: AnyCPU
 configuration: Release
 
 branches:
@@ -22,6 +24,12 @@ cache:
 build:
     project: AppveyorDemo.sln
     verbosity: minimal
+
+test: on
+
+after_test:
+- nuget pack AppveyorDemo\AppveyorDemo.nuspec -Version %version%
+- appveyor PushArtifact AppveyorDemo.%version%.nupkg
 
 nuget:
   account_feed: true
