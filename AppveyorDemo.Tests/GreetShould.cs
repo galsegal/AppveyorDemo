@@ -13,5 +13,13 @@ namespace AppveyorDemo.Tests
             var result = greet.SayHallo();
             result.ShouldBe("Hello");
         }
+
+        [Test]
+        public void SayHelloAgain()
+        {
+            var greet = new Greet();
+            var result = greet.SayHallo();
+            result.ShouldBe("Hello");
+        }
     }
 }
