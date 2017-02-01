@@ -24,12 +24,10 @@ cache:
 build:
     project: AppveyorDemo.sln
     verbosity: minimal
-
-test: on
-
-after_test:
-- nuget pack AppveyorDemo\AppveyorDemo.nuspec -Version %appveyor_build_version%
-- appveyor PushArtifact AppveyorDemo.%appveyor_build_version%.nupkg
+    publish_nuget: true
+    publish_nuget_symbols: true
+    include_nuget_references: true
+    
 
 nuget:
   account_feed: true
