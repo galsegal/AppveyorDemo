@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace AppveyorDemo
+﻿namespace AppveyorDemo
 {
     public class Greet
     {
-        public void SayHallo()
+        public string SayHallo()
         {
-            Console.WriteLine("Hello");
+            return "Hello";
         }
     }
 }

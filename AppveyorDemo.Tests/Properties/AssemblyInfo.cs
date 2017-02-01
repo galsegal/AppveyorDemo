@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AppveyorDemo")]
+[assembly: AssemblyTitle("AppveyorDemo.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AppveyorDemo")]
+[assembly: AssemblyProduct("AppveyorDemo.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e9e810bf-db97-4559-a3cf-c157aba085d5")]
+[assembly: Guid("e87cba71-ceb9-49cf-92fd-1540c54f6c1b")]
 
 // Version information for an assembly consists of the following four values:
 //
