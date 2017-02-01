@@ -1,57 +1,36 @@
-os: Windows Server 2012
-platform: Any CPU
+# configuration for "master" branch
+# build in Release mode and deploy to Azure
+-
+  branches:
+    only:
+      - master
 
-assembly_info: 
-  patch: true 
-  file: AssemblyInfo.* 
-  assembly_version: "{version}" 
-  assembly_file_version: "{version}" 
-  assembly_informational_version: "{version}"
+  configuration: Release
+  os: Windows Server 2012
+  platform: Any CPU
 
-before_build:
-  - nuget restore
+  assembly_info: 
+    patch: true 
+    file: AssemblyInfo.* 
+    assembly_version: "{version}" 
+    assembly_file_version: "{version}" 
+    assembly_informational_version: "{version}"
 
-cache:
-  - packages -> **\packages.config
+  cache:
+    - packages -> **\packages.config
 
-build:
+  before_build:
+    - nuget restore
+
+  build:
     project: AppveyorDemo.sln
     verbosity: minimal
     publish_nuget: true
     publish_nuget_symbols: true
     include_nuget_references: true
-
--
-    branches:
-        only:
-            - master
-    
-    version: 1.0.0
-    configuration: Release
-
--
-    branches:
-        only:
-            - develop
-    
-    version: 1.0.0-beta.{version}
-    configuration: Debug
-
--    
-    branches:
-        only:
-            - feature/*
-    
-    version: 1.0.0-alpha.{version}
-    configuration: Debug
   
-
-
-
-
-
-    
-
-nuget:
-  account_feed: true
-  project_feed: true
+  test: on
+  
+  nuget:
+    account_feed: true
+    project_feed: true
