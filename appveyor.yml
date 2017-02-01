@@ -1,6 +1,5 @@
 os: Windows Server 2012
 platform: Any CPU
-configuration: Release
 
 assembly_info: 
   patch: true 
@@ -22,23 +21,29 @@ build:
     publish_nuget_symbols: true
     include_nuget_references: true
 
-branches:
-  only:
-    - master
+-
+    branches:
+        only:
+            - master
     
-version: 1.0.0
+    version: 1.0.0
+    configuration: Release
 
-branches:
-  only:
-    - develop
+-
+    branches:
+        only:
+            - develop
     
-version: 1.0.0-beta.{version}
+    version: 1.0.0-beta.{version}
+    configuration: Debug
 
-branches:
-  only:
-    - feature/*
+-    
+    branches:
+        only:
+            - feature/*
     
-version: 1.0.0-alpha.{version}
+    version: 1.0.0-alpha.{version}
+    configuration: Debug
   
 
 
