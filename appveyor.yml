@@ -1,7 +1,7 @@
 version: 1.0.0.{build}
 
 os: Windows Server 2012
-platform: AnyCPU
+platform: Any CPU
 configuration: Release
 
 branches:
