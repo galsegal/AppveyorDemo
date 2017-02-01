@@ -5,6 +5,7 @@
     only:
       - master
 
+  version: 1.0.0
   configuration: Release
   os: Windows Server 2012
   platform: Any CPU
