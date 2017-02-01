@@ -27,11 +27,12 @@
     project: AppveyorDemo.sln
     verbosity: minimal
 
-  after_build:
+  test: on
+
+  deploy_script:
   - nuget pack AppveyorDemo\AppveyorDemo.nuspec -Version %appveyor_build_version% -symbols
   - appveyor PushArtifact AppveyorDemo.%appveyor_build_version%.nupkg
-  
-  test: on
+  - appveyor PushArtifact AppveyorDemo.%appveyor_build_version%.symbols.nupkg
   
   nuget:
     account_feed: true
