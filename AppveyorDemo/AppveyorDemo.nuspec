@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>AppveyorDemo</id>
+        <version>0.0.0</version>
+        <title>Appveyor Demo</title>
+        <authors>Gal Segal</authors>
+        <owners>Gal Segal</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Appveyor Demo</description>
+        <summary>Appveyor demo</summary>
+        <releaseNotes></releaseNotes>
+        <tags>testing appveyor</tags>
+        <dependencies>
+            <dependency id="NUnit" version="3.6.0" />
+            <dependency id="Shouldly" version="2.8.2" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\AppveyorDemo.dll" target="lib\net451\AppveyorDemo.dll" />
+    </files>
+</package>
