@@ -4,7 +4,7 @@
     {
         public string SayHallo()
         {
-            return "Hello World";
+            return "Hello";
         }
     }
 }
