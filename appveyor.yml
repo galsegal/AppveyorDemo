@@ -5,6 +5,7 @@
     only:
       - master
 
+  skip_tags: true
   version: 1.0.0.{build}
   configuration: Release
   os: Windows Server 2012
@@ -37,3 +38,11 @@
   nuget:
     account_feed: true
     project_feed: true
+    
+  notifications:
+  - provider: Email
+    to:
+      - me@gal-segal.com
+    on_build_success: false
+    on_build_failure: false
+    on_build_status_changed: true
