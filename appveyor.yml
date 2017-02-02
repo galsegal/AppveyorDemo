@@ -24,7 +24,8 @@
 
   before_build:
   - cmd: appveyor AddMessage "Commited by %APPVEYOR_REPO_COMMIT_AUTHOR%"
-  - cmd: appveyor AddMessage "%APPVEYOR_REPO_COMMIT_MESSAGE% %APPVEYOR_REPO_COMMIT_MESSAGE_EXTENDED%"
+  - cmd: appveyor AddMessage "%APPVEYOR_REPO_COMMIT_MESSAGE%"
+  - cmd: appvevoy AddMessage "%APPVEYOR_REPO_COMMIT_MESSAGE_EXTENDED%"
   - nuget restore
 
   build:
