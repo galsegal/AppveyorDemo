@@ -48,9 +48,9 @@
     artifact: /.*\.nupkg/
     draft: false
     prerelease: false
-  on:
-    branch: master
-    appveyor_repo_tag: true
+    on:
+      branch: master
+      appveyor_repo_tag: true
   
   nuget:
     account_feed: true
