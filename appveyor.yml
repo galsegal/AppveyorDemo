@@ -23,6 +23,7 @@
   - packages -> **\packages.config
 
   before_build:
+  - echo %APPVEYOR_REPO_COMMIT_MESSAGE%
   - nuget restore
 
   build:
