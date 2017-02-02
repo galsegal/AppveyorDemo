@@ -23,9 +23,6 @@
   - packages -> **\packages.config
 
   before_build:
-  - cmd: appveyor AddMessage "Commited by %APPVEYOR_REPO_COMMIT_AUTHOR%"
-  - cmd: appveyor AddMessage "%APPVEYOR_REPO_COMMIT_MESSAGE%"
-  - cmd: appveyor AddMessage "%APPVEYOR_REPO_COMMIT_MESSAGE_EXTENDED%"
   - nuget restore
 
   build:
