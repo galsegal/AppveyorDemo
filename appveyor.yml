@@ -22,7 +22,8 @@
     - packages -> **\packages.config
 
   before_build:
-    - nuget restore
+  - message: %APPVEYOR_REPO_COMMIT_MESSAGE%
+  - nuget restore
 
   build:
     project: AppveyorDemo.sln
