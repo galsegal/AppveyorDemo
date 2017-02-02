@@ -10,6 +10,7 @@
   configuration: Release
   os: Windows Server 2012
   platform: Any CPU
+  message: %APPVEYOR_REPO_COMMIT_MESSAGE%
 
   assembly_info: 
     patch: true 
@@ -19,10 +20,9 @@
     assembly_informational_version: "{version}"
 
   cache:
-    - packages -> **\packages.config
+  - packages -> **\packages.config
 
   before_build:
-  - message: %APPVEYOR_REPO_COMMIT_MESSAGE%
   - nuget restore
 
   build:
