@@ -10,7 +10,7 @@
   configuration: Release
   os: Windows Server 2012
   platform: Any CPU
-  message: "%APPVEYOR_REPO_COMMIT_MESSAGE%"
+  
 
   assembly_info: 
     patch: true 
